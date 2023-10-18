@@ -14,13 +14,9 @@
         right: 50%;
         transform: translateX(50%);
 
-        & span {
+        &:before {
             display: inline-block;
             margin-right: 5px;
-
-            &:after {
-                content: ":";
-            }
         }
 
         &:after {
@@ -32,7 +28,7 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xxs) {
     #cssmqd {
         &:after {
-            content: "@{screen__xxs}";
+            content: "@{screen__xxs} (xxs)";
         }
     }
 }
@@ -40,7 +36,7 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
     #cssmqd {
         &:after {
-            content: "@{screen__xs}";
+            content: "@{screen__xs} (xs)";
         }
     }
 }
@@ -48,7 +44,7 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
     #cssmqd {
         &:after {
-            content: "@{screen__s}";
+            content: "@{screen__s} (s)";
         }
     }
 }
@@ -56,36 +52,32 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     #cssmqd {
-        & span {
-            &:before {
-                content: "max";
-            }
+        &:before {
+            content: "max:";
         }
+
         &:after {
-            content: "@{screen__m}";
+            content: "@{screen__m} (m)";
         }
     }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     #cssmqd {
-        & span {
-            &:before {
-                content: "min";
-            }
+        &:before {
+            content: "min:";
         }
 
         &:after {
-            content: "@{screen__m}";
+            content: "@{screen__m} (m)";
         }
     }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
     #cssmqd {
-
         &:after {
-            content: "@{screen__l}";
+            content: "@{screen__l} (l)";
         }
     }
 }
@@ -93,7 +85,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
     #cssmqd {
         &:after {
-            content: "@{screen__xl}";
+            content: "@{screen__xl} (xl)";
         }
     }
 }

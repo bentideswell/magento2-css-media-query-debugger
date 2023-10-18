@@ -9,4 +9,4 @@ foreach ((array)$block->getData('trigger_param_names') as $paramName) {
     $canDisplay = $canDisplay || ($paramName && isset($params[$paramName]));
 }
 
-echo $canDisplay ? '<div id="cssmqd"><span></span></div>' : '';
+echo $canDisplay ? '<div id="cssmqd"></div>' : '';
